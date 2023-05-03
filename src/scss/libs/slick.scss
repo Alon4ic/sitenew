@@ -1,0 +1,21 @@
+
+.slick-list {
+	overflow: hidden;
+	width: 100%;
+}
+.slick-track {
+	display: flex;
+	justify-content: center;
+}
+
+.slick-slide, .slick-clone {
+	min-width: 0;
+	max-width: 580px;
+	min-height: 184px;
+	padding: 24px;
+	margin-left: 16px;
+	margin-right: 16px;
+	background-color: $white;
+	border: 1px solid #1C1C1C;
+	border-radius: 16px;
+}

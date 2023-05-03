@@ -1,0 +1,21 @@
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+}
+.tags-item {
+	font-family: "Roboto",
+	sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1.2;
+
+	color: $white;
+	padding: 4px 7px;
+	background-color: #EA8C1E;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	text-align: center;
+	list-style: none;
+}

@@ -1,0 +1,35 @@
+.header__autor-list {
+	position: absolute;
+	top: 26px;
+	right: 124px;
+	@include breakpoint($maxLarge-bp) {
+		right: 50px;
+	}
+	@include breakpoint($wide-bp) {
+		display: none;
+	}
+}
+.header__box {
+	 position: absolute;
+	 top: 192px;
+	 left: 124px;
+}
+.header__autor-top {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 86px;
+}
+.header__autor-top--title {
+	max-width: 56.1%;
+}
+.header__autor-top--title h2 {
+	font-family: 'Open Sans';
+	font-weight: 500;
+	font-size: 72px;
+	line-height: 110%;
+	color: #F9F9F9;
+	margin-right: 64px;
+}
+.header__autor-top--content {
+	
+}

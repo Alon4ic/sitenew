@@ -1,0 +1,105 @@
+.testemonial__block {
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include breakpoint($wide-bp) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@include breakpoint($mobile-bp) {
+		flex-direction: column-reverse;
+	}
+}
+.testemonial__content {
+	max-width: 564px;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 64px;
+}
+.testimonials__txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: $primary;
+	padding-left: 36px;
+	margin-bottom: 8px;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 34px;
+		height: 2px;
+		background-color: $primary;
+		position: absolute;
+		top: 10px;
+		left: 218px;
+		z-index: 110;
+	}
+}
+.testemonials__title {
+	font-family: 'Open Sans';
+	max-width: 564px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 52px;
+	text-align: center;
+	line-height: 110%;
+	color: #252525;
+	@include breakpoint($tablet-bp) {
+		font-size: 46px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 38px;
+	}
+}
+.testemonials__inner-slider {
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.testemonials__inner-slider--item_box {
+	display: flex;
+	justify-content: space-between;
+}
+.testemonials__inner-slider--item_box-left {
+	display: flex;
+	justify-content: start;
+	padding-bottom: 16px;
+}
+.testemonials__inner-slider--item_box-img img {
+	width: 48px;
+	height: 48px;
+	border-radius: 100px;
+	margin-right: 8px;
+}
+.testemonials__inner-slider--item_box-content {
+	display: block;
+	text-align: left;
+}
+
+.testemonials__inner-slider--item_box-content h4 {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #252525;
+}
+.testemonials__inner-slider--item_box-content p {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 155%;
+	color: #7C7C7C;
+}
+.testemonials__inner-slider--item_txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #7C7C7C;
+	text-align: left;
+}

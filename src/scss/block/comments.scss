@@ -1,0 +1,72 @@
+.comments {
+	margin-top: 50px;
+	padding-left: 0;
+}
+.comments-item {
+	list-style: none;
+	margin-bottom: 15px;
+
+	>.comments {
+		padding-left: 30px;
+		margin-top: 30px;
+		
+		@include breakpoint($mobile-bp) {
+			padding-left: 15px;
+			margin-top: 15px;
+		}
+	}
+}
+.comments-header {
+	display: flex;
+}
+.comments-avatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.comments-author {
+	flex-grow: 1;
+	padding-left: 15px;
+}
+.comments-name {
+	font-family: "Roboto",
+	sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: $white;
+}
+.comments-date {
+	font-family: "Roboto",
+	sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #757575;
+}	
+.comments-text {
+	margin-top: 15px;
+	margin-bottom: 10px;
+
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.2;
+
+	color: $white;
+}
+.comments-reply {
+	font-family: "Roboto",
+	sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.2;
+
+	color: #107eff;
+	background-color: none;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

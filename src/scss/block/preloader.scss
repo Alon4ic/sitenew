@@ -1,0 +1,78 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	background: linear-gradient(122.91deg, #FFFFFF -8.48%, #DCF4EC 62.27%);
+}
+.preloader__img {
+	max-width: 100%;
+}
+.preloader__block {
+	position: absolute;
+	display: flex;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	//opacity: 0;
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.preloader__logo {
+	width: 180px;
+	height: 180px;
+	margin-right: 49px;
+
+	@include breakpoint($tablet-bp) {
+		width: 120px;
+		height: 120px;
+		margin-right: 29px;
+	}
+	@include breakpoint($mobile-bp) {
+		width: 80px;
+		height: 80px;
+		margin-right: 20px;
+	}
+	@include breakpoint($small-bp) {
+		width: 60px;
+		height: 60px;
+		margin-right: 10px;
+	}
+}
+.preloader-animation .preloader__block {
+	opacity: 1;
+	transform: translate(-50%, -50%);
+}
+.preloader-hidden .preloader__block {
+	opacity: 0;
+	transition-delay: 0.5s;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s ease-in-out;
+}
+.preloader-none {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.preloader__content {
+	padding-top: 15px;
+	font-family: 'General Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 183.82px;
+	line-height: 100%;
+	color: $main;
+
+	@include breakpoint($tablet-bp) {
+		font-size: 120px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding-top: 5px;
+		font-size: 80px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 60px;
+	}
+}

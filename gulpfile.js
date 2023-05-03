@@ -1,50 +1,49 @@
-import gulp from 'gulp' // Основной модуль
-import { path } from './gulp/config/path.js' // Импорт путей
-import { plugins } from './gulp/config/plugins.js' // Импорт общих плагинов
+const { watch, series, parallel } = require("gulp");
+const browserSync = require("browser-sync").create();
 
-// Импорт задач
-import { copy } from './gulp/tasks/copy.js'
-import { reset } from './gulp/tasks/reset.js'
-import { html } from './gulp/tasks/html.js'
-import { server } from './gulp/tasks/server.js'
-import { scss } from './gulp/tasks/scss.js'
-import { js } from './gulp/tasks/js.js'
-import { images } from './gulp/tasks/images.js'
-import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js'
-import { svgSprive } from './gulp/tasks/svgSprive.js'
-import { zip } from './gulp/tasks/zip.js'
-import { ftp } from './gulp/tasks/ftp.js'
+const path = require("./config/path.js");
+const app = require("./config/app.js");
 
-// Передаем значения в глобальную переменную
-global.app = {
-  isBuild: process.argv.includes('--build'),
-  isDev: !process.argv.includes('--build'),
-  path,
-  gulp,
-  plugins,
+const html = require('./task/html.js');
+const clear = require('./task/clear.js');
+const scss = require('./task/scss.js');
+const js = require('./task/js.js');
+const img = require('./task/img.js');
+const font = require('./task/font.js');
+
+const server = () => {
+	browserSync.init({
+		server: {
+			baseDir: path.root
+		}
+	})
 }
 
-// Наблюдатель за изменениями в файлах
-function watcher() {
-  gulp.watch(path.watch.static, copy)
-  gulp.watch(path.watch.html, html)
-  gulp.watch(path.watch.scss, scss)
-  gulp.watch(path.watch.js, js)
-  gulp.watch(path.watch.images, images)
+const watcher = () => {
+	watch(path.html.watch, html).on("all", browserSync.reload);
+	watch(path.scss.watch, scss).on("all", browserSync.reload); 
+	watch(path.js.watch, js).on("all", browserSync.reload); 
+	watch(path.img.watch, img).on("all", browserSync.reload);
+	watch(path.font.watch, font).on("all", browserSync.reload);
 }
+const build = series(
+	clear,
+	parallel(html, scss, js, img, font)
+);
 
-// Последовательная обработка шрифтов
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle)
-// Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images))
-// Построение сценариев выполнения задач
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
-const build = gulp.series(reset, mainTasks)
-const deployZIP = gulp.series(reset, mainTasks, zip)
-const deployFTP = gulp.series(reset, mainTasks, ftp)
+const dev = series(
+	build,
+	parallel(watcher, server)
+);
 
-// Выполнение сценария по умолчанию
-gulp.task('default', dev)
+exports.html = html;
+exports.scss = scss;
+exports.js = js;
+exports.img = img;
+exports.font = font;
+exports.watch = watcher;
+exports.clear = clear;
 
-// Экспорт сценариев
-export { dev, build, deployZIP, deployFTP, svgSprive }
+exports.default = app.isProd
+? build
+: dev;

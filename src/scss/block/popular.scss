@@ -1,0 +1,368 @@
+.popular__top {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+
+	@include breakpoint($tablet-bp) {
+		margin-bottom: 20px;
+	}
+	@include breakpoint($mobile-bp) {
+		display: block;
+	}
+}
+.popular__top-left {
+	position: relative;
+	width: 52%;
+
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+	}
+	
+}
+.popular__top-left--descr {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: $primary;
+	padding-left: 36px;
+	margin-bottom: 8px;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 34px;
+		height: 2px;
+		background-color: $primary;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		z-index: 110;
+	}
+}
+.popular__top-left--title {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 52px;
+	line-height: 110%;
+	color: #252525;
+
+	@include breakpoint($tablet-bp) {
+		font-size: 46px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 38px;
+	}
+}
+.popular__top-right {
+	width: 42.6%;
+	padding-top: 66px;
+	@include breakpoint($mobile-bp) {
+		padding-top: 30px;
+		width: 100%;
+	}
+	@include breakpoint($small-bp) {
+		padding-top: 20px;
+	}
+}
+.popular__top-right--txt {
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 135%;
+	color: #7C7C7C;
+	@include breakpoint($tablet-bp) {
+		font-size: 16px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 14px;
+	}
+}
+.popular__inner {
+	display: flex;
+	justify-content: start;
+	flex-wrap: wrap;
+	border-bottom: 2px solid #E0E0E0;
+}
+.popular__inner-link {
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: #A8A8A8;
+	padding: 24px 16px;
+	text-decoration: none;
+	cursor: pointer;
+	@include breakpoint($mobile-bp) {
+		padding: 12px 10px 20px;
+	}
+	@include breakpoint($small-bp) {
+		padding: 8px 10px 6px;
+	}
+}
+.popular__inner-link:hover {
+	text-decoration: none;
+	color: $main;
+	border-bottom: 2px solid $primary;
+}
+.popular__card {
+	display: flex;
+	width: 100%;
+
+	@include breakpoint($mobile-bp) {
+		display: block;
+	}
+}
+.popular__card-item {
+	margin-top: 32px;
+	max-width: 31.5%;
+	
+	@include breakpoint($mobile-bp) {
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.first {
+	margin-right: 32px;
+
+	@include breakpoint($mobile-bp) {
+		margin-right: 0;
+	}
+}
+.second {
+	margin-right: 32px;
+
+	@include breakpoint($mobile-bp) {
+		margin-right: 0;
+	}
+}
+.popular__card-item--img {
+	border-radius: 20px 20px 0 0;
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 24px;
+	@include breakpoint($little-bp) {
+		padding-bottom: 14px;
+	}
+}
+.popular__card-item--text {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 130%;
+	color: #252525;
+
+	@include breakpoint($wide-bp) {
+		font-size: 18px;
+	}
+	@include breakpoint($mobile-bp) {
+		font-size: 20px;
+	}
+	@include breakpoint($little-bp) {
+		font-size: 16px;
+	}
+}
+.popular__card-item--box {
+	display: flex;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1.5px solid #E0E0E0;
+}
+.popular__card-item--box_txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #7C7C7C;
+	padding-right: 16px;
+	position: relative;
+
+	@include breakpoint($wide-bp) {
+		font-size: 14px;
+	}
+	@include breakpoint($mobile-bp) {
+		font-size: 16px;
+	}
+	@include breakpoint($little-bp) {
+		font-size: 14px;
+	}
+}
+.popular__card-item--box_icon {
+	margin-top: 2px;
+
+	@include breakpoint($wide-bp) {
+		width: 18px;
+		height: 18px;
+		margin-top: 1px;
+	}
+	@include breakpoint($mobile-bp) {
+		width: 20px;
+		height: 20px;
+		margin-top: 2px;
+	}
+}
+.popular__card-item--box_num {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #7C7C7C;
+	padding-left: 4px;
+	position: relative;
+
+	@include breakpoint($wide-bp) {
+		font-size: 14px;
+	}
+	@include breakpoint($mobile-bp) {
+		font-size: 16px;
+	}
+	@include breakpoint($little-bp) {
+		font-size: 14px;
+	}
+}
+.popular__card-item--box_num::before {
+	content: '';
+	width: 4px;
+	height: 4px;
+	background-color: #E0E0E0;
+	position: absolute;
+	top: 9px;
+	left: -28px;
+}
+.popular__card-item--box_price {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 120%;
+	color: #252525;
+	margin-left: 17px;
+	margin-top: -8px;
+	padding-bottom: 0;
+
+	@include breakpoint($wide-bp) {
+		font-size: 24px;
+		margin-left: 10px;
+		margin-top: -4px;
+	}
+	@include breakpoint($mobile-bp) {
+		font-size: 32px;
+		margin-left: 17px;
+		margin-top: -8px;
+	}
+	@include breakpoint($little-bp) {
+		font-size: 22px;
+		margin-top: -2px;
+		margin-left: 10px;
+	}
+}
+.popular__card-item--block {
+	display: flex;
+	justify-content: start;
+	padding-bottom: 16.5px;
+	margin-top: 22.5px;
+	@include breakpoint($tablet-bp) {
+		display: block;
+	}
+	@include breakpoint($mobile-bp) {
+		display: flex;
+	}
+	@include breakpoint($wee-bp) {
+		display: block;
+		margin-top: 12.5px;
+	}
+}
+.popular__card-item--block_item {
+	display: flex;
+	position: relative;
+	padding-bottom: 10px;
+}
+.one {
+	margin-left: 16px;
+	@include breakpoint($tablet-bp) {
+		margin-left: 0;
+	}
+	@include breakpoint($mobile-bp) {
+		margin-left: 16px;
+	}
+	@include breakpoint($wee-bp) {
+		margin-left: 0;
+	}
+}
+.one::before {
+	content: '';
+	width: 4px;
+	height: 4px;
+	background-color: #E0E0E0;
+	position: absolute;
+	top: 9px;
+	left: -8px;
+	@include breakpoint($tablet-bp) {
+		display: none;
+	}
+	@include breakpoint($mobile-bp) {
+		display: block;
+	}
+	@include breakpoint($wee-bp) {
+		display: none;
+	}
+}
+.popular__card-item--block_item img {
+	@include breakpoint($wide-bp) {
+		width: 18px;
+		height: 18px;
+	}
+	@include breakpoint($mobile-bp) {
+		width: 20px;
+		height: 20px;
+	}
+}
+.popular__card-item--block_item p {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 155%;
+	color: #7C7C7C;
+	padding-left: 4px;
+	@include breakpoint($wide-bp) {
+		font-size: 12px;
+	}
+	@include breakpoint($mobile-bp) {
+		font-size: 14px;
+	}
+}
+.popular__btn {
+	width: 173px;
+	height: 56px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 16px 32px;
+	border: 1px solid $primary;
+	border-radius: 1000px;
+	color: #32BCA3;
+	cursor: pointer;
+	margin-top: 31.5px;
+	@include breakpoint($tablet-bp) {
+		margin-top: 21px;
+	}
+	@include breakpoint($small-bp) {
+		margin-top: 11px;
+	}
+}
+.popular__btn:hover {
+	background-color: $primary;
+	color: $white;
+}
+.popular__btn-link {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+}

@@ -1,0 +1,128 @@
+.choice__block {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include breakpoint($wide-bp) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@include breakpoint($mobile-bp) {
+		flex-direction: column-reverse;
+	}
+}
+.choice__left {
+	width: 46%;
+	display: block;
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+	}
+}
+.choice__left-card {
+	width: 100%;
+	padding-bottom: 32px;
+	@include breakpoint($tablet-bp) {
+		padding-bottom: 24px;
+	}
+}
+.choice__left-card:not(:last-child) {
+	border-bottom: 1px solid #E0E0E0;
+	margin-bottom: 32px;
+	@include breakpoint($tablet-bp) {
+		margin-bottom: 24px;
+	}
+}
+.choice__left-card--icon {
+	width: 40px;
+	height: 40px;
+	margin-bottom: 16px;
+	@include breakpoint($tablet-bp) {
+		width: 36px;
+		height: 36px;
+		margin-bottom: 10px;
+	}
+}
+.choice__left-card--title {
+	font-family: 'Open Sans';
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 120%;
+	color: #252525;
+	margin-bottom: 8px;
+	@include breakpoint($tablet-bp) {
+		font-size: 26px;
+	}
+}
+.choice__left-card--txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #7C7C7C;
+}
+.choice__right {
+	width: 48.7%;
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+	}
+}
+.choice__right-desc {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: $primary;
+	padding-left: 36px;
+	margin-bottom: 8px;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 34px;
+		height: 2px;
+		background-color: $primary;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		z-index: 110;
+	}
+}
+.choice__right-title {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 52px;
+	line-height: 110%;
+	color: #252525;
+	@include breakpoint($tablet-bp) {
+		font-size: 46px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 38px;
+	}
+}
+.choice__right-txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 135%;
+	color: #7C7C7C;
+	margin-top: 24px;
+	margin-bottom: 64px;
+	@include breakpoint($tablet-bp) {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 14px;
+	}
+	@include breakpoint($middle-bp) {
+		margin-bottom: 24px;
+	}
+}
+.choice__right-img {
+	max-width: 100%;
+	height: auto;
+}

@@ -1,0 +1,279 @@
+.footer {
+	background: #1C1C1C;
+	border-radius: 24px 24px 0px 0px;
+	position: relative;
+	min-height: 1126px;
+	@include breakpoint($big-bp) {
+		min-height: 1256px;
+	}
+	@include breakpoint($large-bp) {
+		min-height: 1286px;
+	}
+	@include breakpoint($tablet-bp) {
+		min-height: 1000px;
+	}
+}
+.footer__img {
+	width: 100%;
+	height: auto;
+}
+.footer__block {
+	position: absolute;
+	top: 100px;
+	left: 124px;
+	right: 124px;
+	@include breakpoint($large-bp) {
+		left: 20px;
+		right: 20px;
+	}
+	@include breakpoint($tablet-bp) {
+		top: 70px;
+	}
+	@include breakpoint($mobile-bp) {
+		top: 50px;
+		margin: 0 auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.footer__top {
+	display: block;
+	margin: 0 auto;
+	max-width: 933px;
+	margin-bottom: 80px;
+	@include breakpoint($large-bp) {
+		margin-bottom: 50px;
+	}
+}
+.footer__title {
+	text-align: center;
+	font-family: 'Open Sans';
+	font-weight: 500;
+	font-size: 72px;
+	line-height: 110%;
+	color: $white;
+	@include breakpoint($tablet-bp) {
+		font-size: 46px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 38px;
+	}
+}
+.footer__txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 130%;
+	text-align: center;
+	color: #E0E0E0;
+	padding: 24px 50px 0 50px;
+	margin-bottom: 48px;
+	@include breakpoint($tablet-bp) {
+		font-size: 16px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 14px;
+		padding: 24px 20px 0 20px;
+	}
+}
+.footer__btn {
+	display: block;
+	margin: 0 auto;
+	background: $primary;
+	border-radius: 1000px;
+	padding: 20px 40px;
+	border: none;
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 135%;
+	color: $main;
+	@include breakpoint($tablet-bp) {
+		font-size: 16px;
+		padding: 15px 40px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 14px;
+	}
+}
+.footer__brands {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 80px;
+	@include breakpoint($large-bp) {
+		margin-bottom: 50px;
+	}
+}
+.footer__brands-first {
+	padding: 40px 49.2px;
+	@include breakpoint($tablet-bp) {
+		padding: 20px 39.2px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding: 10px;
+	}
+}
+.footer__brands-second {
+	padding: 40px 41.7px;
+	@include breakpoint($tablet-bp) {
+		padding: 20px 31.7px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding: 10px;
+	}
+}
+.footer__brands-third {
+	padding: 40px 43.7px;
+	@include breakpoint($tablet-bp) {
+		padding: 20px 33.7px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding: 10px;
+	}
+}
+.footer__brands-fourth {
+	padding: 40px 40.3px;
+	@include breakpoint($tablet-bp) {
+		padding: 20px 30.3px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding: 10px;
+	}
+}
+.footer__brands-fifth {
+	padding: 40px 25.8px;
+	@include breakpoint($tablet-bp) {
+		padding: 20px 15.8px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding: 10px;
+	}
+}
+.footer__middle {
+	display: flex;
+	justify-content: space-between;
+	max-width: 100%;
+	padding-bottom: 48px;
+	@include breakpoint($mobile-bp) {
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+.footer__middle-biz {
+	max-width: 32.2%;
+	@include breakpoint($mobile-bp) {
+		max-width: 100%;
+		display: flex;
+	}
+}
+
+.footer__middle-biz--txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #E0E0E0;
+	margin-top: 32px;
+	@include breakpoint($mobile-bp) {
+		padding: 0 50px 40px 20px;
+		margin-top: 5px;
+	}
+	@include breakpoint($small-bp) {
+		padding: 0 20px 40px 20px;
+	}
+}
+.footer__middle-inner {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 128px;
+	max-width: 57.1%;
+	@include breakpoint($mobile-bp) {
+		max-width: 100%;
+		margin-left: 20px;
+	}
+}
+.footer__midle-inner--first, .footer__middle-company {
+	width: 184px;
+	margin-right: 64px;
+	@include breakpoint($tablet-bp) {
+		margin-right: 40px;
+	}
+	@include breakpoint($mobile-bp) {
+		margin-right: auto;
+	}
+}
+.footer__middle-community {
+	width: 184px;
+}
+.footer__middle-inner--title, .footer__middle-company--title,
+.footer__middle-community--title {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 135%;
+	color: $white;
+	padding-bottom: 16px;
+	@include breakpoint($small-bp) {
+		font-size: 16px;
+		padding-bottom: 12px;
+	}
+}
+.footer__midle-inner--item a,
+.footer__middle-company--item a,
+.footer__middle-community--item a {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #E0E0E0;
+	@include breakpoint($small-bp) {
+		font-size: 14px;
+	}
+}
+.footer__midle-inner--item:not(:last-child), 
+.footer__middle-company--item:not(:last-child),
+.footer__middle-community--item:not(:last-child) {
+	padding-bottom: 12px;
+	@include breakpoint($tablet-bp) {
+		padding-bottom: 8px;
+	}
+}
+.footer__line {
+	margin: 0 -124px;
+	height: 1px;
+	background-color: #7C7C7C;
+	border: none;
+	@include breakpoint($large-bp) {
+		margin: 0 -20px;
+	}
+}
+.footer__bottom {
+	margin-top: 32px;
+	margin-bottom: 32px;
+	display: flex;
+	justify-content: space-between;
+	@include breakpoint($little-bp) {
+		display: block;
+		margin: 0 austo;
+		text-align: center;
+	}
+}
+.footer__bottom-content {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 155%;
+	color: #E0E0E0;
+	@include breakpoint($little-bp) {
+		padding-bottom: 20px;
+	}
+}
+.footer__bottom-social--link:not(:last-child) {
+	padding-right: 40px;
+	@include breakpoint($small-bp) {
+		padding-right: 20px;
+	}
+}

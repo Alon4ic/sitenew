@@ -1,0 +1,120 @@
+@import "../scss/block/vars";
+@import "../scss/block/mixins";
+@import "vendor/reset.scss";
+
+@mixin ph {
+	@media (max-width: 700px) {
+		@content;
+	}
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	max-width: 1440px;
+	font-size: $base-font-size;
+	font-family: -apple-system, "Plus Jakarta Sans", Roboto, sans-serif;
+	line-height: 1.5;
+	background-color: #ffffff;
+	
+	color: $white;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+
+
+	@include ph {
+		color: #fff;
+		background-color: #000;
+	}	
+}
+.container {
+	max-width: 1192px;
+	margin: 0 auto;
+
+	@include breakpoint($large-bp) {
+		padding: 0 20px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding: 0 10px;
+	}
+}
+.brends {
+	background-color: $white;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	@include breakpoint($tablet-bp) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@include breakpoint($mobile-bp) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@include breakpoint($little-bp) {
+		padding-bottom: 0;
+	}
+}
+.popular {
+	background-color: $white;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	@include breakpoint($wide-bp) {
+		padding-top: 70px;
+		padding-bottom: 50px;
+	}
+}
+.authors {
+	background-color: $main;
+	position: relative;
+	min-height: 1323px;
+	overflow: hidden;
+	@include breakpoint($tablet-bp) {
+		min-height: 1043px;
+	}
+	@include breakpoint($mobile-bp) {
+		min-height: 1323px;
+	}
+	@include breakpoint($little-bp) {
+		min-height: 1373px;
+	}
+	@include breakpoint($wee-bp) {
+		min-height: 1423px;
+	}
+}
+.about, .choice {
+	background-color: #fff;
+}
+.testimonials {
+	background-color: $white;
+}
+
+@import "block/preloader.scss";
+@import "block/header.scss";
+@import "block/home.scss";
+@import "block/popular.scss";
+@import "block/authors.scss";
+@import "block/about.scss";
+@import "block/choice.scss";
+@import "block/testemonials.scss";
+@import "libs/slick.scss";
+@import "block/footer.scss";
+// @import "block/container.scss";
+// @import "block/stories.scss";
+// @import "block/add-post.scss";
+// @import "block/post.scss";
+// @import "block/pagination.scss";
+// @import "block/form.scss";
+// @import "block/related.scss";
+// @import "block/comments.scss";
+// @import "block/page.scss";
+// @import "block/work.scss";
+// @import "block/tags.scss";
+// @import "block/cabinet.scss";
+// @import "block/modal.scss";
+

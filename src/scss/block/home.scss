@@ -1,0 +1,23 @@
+.brands__descr {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 135%;
+	text-align: center;
+	color: #7C7C7C;
+	margin-bottom: 24px;
+}
+.bands__descr-txt {
+	color: $main;
+}
+.brands__box {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.brands__box-img {
+	width: 100%;
+	height: auto;
+	padding: 0 39px;
+}

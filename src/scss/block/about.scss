@@ -1,0 +1,146 @@
+.about__block {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include breakpoint($wide-bp) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@include breakpoint($middle-bp) {
+		display: block;
+	}
+}
+.about__left {
+	width: 43.8%;
+	padding-right: 64px;
+	@include breakpoint($wide-bp) {
+		padding-right: 44px;
+	}
+	@include breakpoint($middle-bp) {
+		width: 100%;
+	}
+}
+.about__left-desc {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: $primary;
+	padding-left: 36px;
+	margin-bottom: 8px;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 34px;
+		height: 2px;
+		background-color: $primary;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		z-index: 110;
+	}
+}
+.about__left-title {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 52px;
+	line-height: 110%;
+	color: #252525;
+
+	@include breakpoint($tablet-bp) {
+		font-size: 46px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 38px;
+	}
+}
+.about__left-txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 135%;
+	color: #7C7C7C;
+	margin-top: 24px;
+	margin-bottom: 48px;
+	@include breakpoint($tablet-bp) {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 14px;
+	}
+	@include breakpoint($middle-bp) {
+		margin-bottom: 24px;
+	}
+}
+.about__left-btn {
+	padding: 16px 32px;
+	background-color: transparent;
+	border: 1px solid $primary;
+	border-radius: 1000px;
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: $primary;
+	@include breakpoint($middle-bp) {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.about__right {
+	display: flex;
+	justify-content: space-between;
+	@include breakpoint($middle-bp) {
+		justify-content: center;
+		margin-top: 30px;
+	}
+}
+.about__right-first {
+	padding-right: 64px;
+	@include breakpoint($wide-bp) {
+		padding-right: 44px;
+	}
+}
+.about__right-first--img {
+	max-width: 100%;
+	height: auto;
+}
+.about__right-second--card:not(:last-child) {
+	padding-bottom: 26px;
+	@include breakpoint($tablet-bp) {
+		padding-bottom: 22px;
+	}
+	@include breakpoint($small-bp) {
+		padding-bottom: 18px;
+	}
+}
+.about__right-second--card_title {
+	font-family: 'Open Sans';
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 120%;
+	color: #252525;
+	padding-bottom: 4px;
+	@include breakpoint($tablet-bp) {
+		font-size: 24px;
+	}
+	@include breakpoint($small-bp) {
+		font-size: 20px;
+	}
+}
+.about__right-second--card_txt {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #7C7C7C;
+	@include breakpoint($small-bp) {
+		font-size: 14px;
+	}
+}
